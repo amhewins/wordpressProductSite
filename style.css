@@ -1,0 +1,168 @@
+/*
+Theme name: Treely Template
+*/
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Typography Styles */
+h1 {
+  color: #65486c;
+}
+
+/* Menu Styles */
+.menu-header-menu-container {
+  background: #aaa9bb;
+}
+.menu-header-menu-container ul {
+  margin: 0;
+  padding: 0;
+}
+.menu-header-menu-container li {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 1.3vw;
+  padding: 0;
+}
+.menu-header-menu-container a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1.8vw;
+}
+.menu-header-menu-container a:hover {
+  background: white;
+  color: #aaa9bb;
+}
+.woocommerce-MyAccount-navigation {
+  background: #aaa9bb;
+}
+.woocommerce-MyAccount-navigation li {
+  display: block;
+  list-style-type: none;
+  font-size: 1vw;
+  padding: 0;
+}
+.woocommerce-MyAccount-navigation a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1vw;
+}
+.woocommerce-MyAccount-navigation a:hover {
+  color: #394069;
+}
+.menu-footer-menu-container {
+  background: #394069;
+}
+.menu-footer-menu-container ul {
+  margin: 0;
+}
+.menu-footer-menu-container li {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 1vw;
+  padding: 0;
+}
+.menu-footer-menu-container a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1vw;
+}
+.menu-social-menu-container ul {
+  margin: 0;
+}
+.menu-social-menu-container li {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 1vw;
+  padding: 0;
+}
+.menu-social-menu-container a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1vw;
+}
+.menu-social-menu-container {
+  background: #394069;
+}
+footer .sub-menu {
+  padding: 0;
+}
+footer .sub-menu li {
+  display: block;
+}
+footer .menu-item a {
+  /*text-decoration: underline;*/
+}
+footer .menu-item .sub-menu a {
+  text-decoration: none;
+}
+footer .menu-item a:hover {
+  color: #aaa9bb;
+}
+
+/* General Content Styles */
+.bodycontent {
+  padding: 0 8vw;
+}
+
+/* Item Order Form */
+select {
+  font-family: inherit;
+}
+
+/* Wordpress.css Overrides */
+.woocommerce a.button.alt, .woocommerce input.button.alt {
+  background-color: #65486c;
+}
+.woocommerce a.button.alt:hover {
+  background-color: #503956;
+}
+.woocommerce input.button.alt:hover {
+  background-color: #503956;
+}
+.input-text {
+  border-radius: 5px;
+}
+.woocommerce-MyAccount-navigation {
+  float: right;
+}
+.woocommerce-EditAccountForm {
+  margin-right: 20px;
+}
+.woocommerce-info, .woocommerce-message {
+  border: 3px solid #394069;
+  border-radius: 8px;
+  background: #aaa9bb;
+  color: white;
+}
+.woocommerce-info, .woocommerce-message a {
+  color: white;
+  text-decoration: none;
+}
+.woocommerce-info::before {
+  color: #65486c;
+}
+.woocommerce-message::before {
+  color: #394069;
+}
+.woocommerce-tabs ul {
+  color: #394069;
+}
+.woocommerce-tabs ul.tabs li {
+  background-color: #aaa9bb;
+}
+.woocommer-error {
+  border: 3px solid #b81c23;
+  border-radius: 8px;
+}
+.nf-form-wrap {
+  width: 50%;
+  margin: 0 auto;
+}
+input, textarea {
+  border-radius: 8px;
+}

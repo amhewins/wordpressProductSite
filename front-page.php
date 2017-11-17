@@ -1,8 +1,7 @@
 <?php
-  /*
-  Template Name: Treely Template
-  */
- ?>
- <?php
-     $images = get_field('home_banner_image');
-    ?>
+/*
+Template Name: Treely Template
+*/
+get_header();
+get_footer();
+?>

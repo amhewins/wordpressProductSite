@@ -1,11 +1,7 @@
 <?php
     get_header();
 ?>
-
-<?php
-    $images = get_field('home_banner_image');
-   ?>
-   
+    <h1>Hello?</h1>
    <?php
        get_footer();
    ?>

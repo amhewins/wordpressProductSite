@@ -37,6 +37,14 @@ h1 {
 .woocommerce-MyAccount-navigation {
   background: #aaa9bb;
 }
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  float: right;
+  width: 20%;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+  float: left;
+  width: 50%;
+}
 .woocommerce-MyAccount-navigation li {
   display: block;
   list-style-type: none;
@@ -165,4 +173,34 @@ select {
 }
 input, textarea {
   border-radius: 8px;
+}
+.woocommerce-billing-fields, .woocommerce-shipping-fields {
+  background: #d2b0ad;
+  padding: 16px;
+  border-radius: 5px;
+}
+.product_meta {
+  display: grid;
+}
+.posted_in a {
+  font-style: italic;
+  text-decoration: none;
+  color: #65486c;
+}
+.star-rating {
+  color: #d2b0ad;
+}
+a.woocommerce-review-link {
+  color: #65486c;
+  text-decoration: none;
+}
+a:hover.woocommerce-review-link {
+  color: #394069;
+}
+.woocommerce .quantity .qty {
+  height: 2.6em;
+}
+h3 {
+  color: red;
+  font-size: 400%;
 }

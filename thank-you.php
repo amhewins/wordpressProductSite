@@ -4,10 +4,6 @@
   */
  ?>
 
- <?php
-     get_header('checkout');
- ?>
+<div class="thankyou">
 
- <?php
-     get_footer();
- ?>
+</div>

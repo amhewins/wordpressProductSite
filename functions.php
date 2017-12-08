@@ -1,15 +1,10 @@
 <?php
 
 function my_assets() {
-	/*wp_enqueue_style( 'theme-style', get_template_directory_uri(), array( 'style' ) );*/
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array( 'style' ) );
+	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css' );
 
-<<<<<<< HEAD
-	/*wp_enqueue_script( 'owl-carousel', get_stylesheet_directory_uri() . '/owl.carousel.js', array( 'jquery' ) );*/
-	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/website-scripts.js', array( 'owl-carousel', 'jquery' ), '1.0', true );
-=======
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/website-scripts.js', array( 'jquery' ), '1.0', true );
->>>>>>> origin/master
 }
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 
@@ -36,19 +31,25 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'header-menu' => __( 'Header Menu' ),
+			'header-bottom-menu' => __( 'Bottom Header Menu' ),
       'banner-menu' => __( 'Banner Menu' ),
 			'header-cart-menu' => __( 'Cart Menu' ),
+			'categories-menu' => __( 'Categories Menu' ),
 			'footer-menu' => __( 'Footer Menu' ),
 			'social-menu' => __( 'Social Menu' ),
+			'image-menu' => __( 'Image Menu' ),
+			'news-menu' => __( 'News Menu' ),
+			'contact-menu' => __( 'Contact Menu' ),
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
 
+/*
 function bbloomer_redirectcustom( $order_id ){
     $order = new WC_Order( $order_id );
 
-    $url = 'http://arcadia-hewins.com/treely/thank-you.php';
+    $url = 'http://arcadia-hewins.com/treely/thank-you';
 
     if ( $order->status != 'failed' ) {
         wp_redirect($url);
@@ -56,6 +57,7 @@ function bbloomer_redirectcustom( $order_id ){
     }
 }
 add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
+*/
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 
@@ -134,5 +136,18 @@ add_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 5 
 add_action( 'woocommerce_cart_collaterals', 'woocommerce_cart_totals', 10 );
 add_action( 'woocommerce_proceed_to_checkout', 'woocommerce_button_proceed_to_checkout', 20 );
 
+add_filter('woocommerce_cross_sells_total', 'cartCrossSellTotal');
+function cartCrossSellTotal($total) {
+    $total = '3';
+    return $total;
+}
+
+function filter_fixed_page_title($title) {
+        $title = preg_replace('~^\s$~', '', $title);
+        $title = preg_replace('~\s$~', '', $title);
+    return trim($title);
+}
+
+add_filter('wp_title', 'filter_fixed_page_title');
 
  ?>
